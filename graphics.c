@@ -522,10 +522,10 @@ void draw(int argc, char *argv[], window* screenWindow, state* screenState){
 		if (charged){
 			double dirtyPropP = proportionPositivelyCharged;
 			sprintf(name, "%.2f", proportionPositivelyCharged);
-			GuiSliderBarDouble((Rectangle){ start + 400*xGUI, 180*yGUI, 50*xGUI, 40*yGUI }, "%+", name, &proportionPositivelyCharged, 0.f, 0.5f);
+			GuiSliderBarDouble((Rectangle){ start + 400*xGUI, 180*yGUI, 50*xGUI, 40*yGUI }, "%+", name, &proportionPositivelyCharged, 0.f, 1.0f);
 			double dirtyPropN = proportionNeutralyCharged;
 			sprintf(name, "%.2f", proportionNeutralyCharged);
-			GuiSliderBarDouble((Rectangle){ start + 500*xGUI, 180*yGUI, 50*xGUI, 40*yGUI }, "%n", name, &proportionNeutralyCharged, 0.f, 0.5f);
+			GuiSliderBarDouble((Rectangle){ start + 500*xGUI, 180*yGUI, 50*xGUI, 40*yGUI }, "%n", name, &proportionNeutralyCharged, 0.f, 1.0f);
 			if ((dirtyPropP != proportionPositivelyCharged) || (dirtyPropN != proportionNeutralyCharged)){
 				printf("Here!");
 				for (int i = 0; i < N; i++){
